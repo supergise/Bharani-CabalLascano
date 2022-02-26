@@ -1,0 +1,698 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background: linear-gradient(180deg, rgba(250, 245, 245, 0.62), 1.34%, rgba(250, 245, 245, 0) 89.17%, #EACDCD 100%);
+}
+
+.header {
+    grid-area: header; 
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+   
+.nav-right-section a {
+    color: #936589; 
+    font-size: 1.2rem;
+}
+   
+a {
+    text-decoration: none;
+}
+
+h2 {
+    color: #936589;
+    width: 100%;
+    text-align: center;
+}
+    
+h3, span {
+    color: rgb(101, 98, 95);
+}
+
+p {
+    color: rgb(84, 83, 83);
+    padding: 0px 0px 20px 0px;
+}
+
+.newsletter {
+    text-align: center;
+    padding: 100px ;
+    grid-area: newsletter;
+}
+
+button, input[type=submit] {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: #936589;
+    color:#F5F5DC;
+    font-size: medium;
+}
+
+input, textarea {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(215, 215, 215);
+    font-size: medium;
+}
+
+.contacto {
+    grid-area: contacto; 
+    text-align: center;
+    font-size: 1.2rem;
+    color:rgb(84, 83, 83);
+    padding: 50px;
+}
+
+.socialMedia a {
+    display: inline-flex;
+    flex-direction: row;
+    color: #936589;
+    font-size: 30px;
+    width: 40px;
+    height: 70px;
+    justify-content: center;
+}
+
+.socialMedia a + a {
+    margin-left: 1rem;
+}
+
+.footer p:first-child {
+    font-size: 30px;
+}
+    
+.datos {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    grid-area: datos;
+}
+
+.footer span {
+    width: 100%;
+    text-align: center;
+    padding: 3px 0;
+}
+
+/* HOME */ 
+
+.main_foto {
+    margin-top: -50px;
+    z-index: -100;
+}
+    
+.main_foto img {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+    
+.logo { 
+    grid-area: logo;
+}
+
+.logo h1 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-size: 100px;
+    font-weight: 100;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #eabc79, #cb6acd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    text-align: center;
+}
+  
+.logo h2 {
+    color: #936589;
+    text-align: end;
+}
+
+.frase2 {
+    grid-area: frase2; 
+    font-size: 30px;
+    padding: 100px 30px 100px 30px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.frase2 p {
+    color: #cb7f0e;
+}
+
+.titulo-a  {
+    grid-area: titulo-a;
+    width: 100%;
+    text-align: center;
+}
+    
+.titulo-b  {
+    grid-area: titulo-b;
+    width: 100%;
+    text-align: center;
+}
+
+.estilocuadrados {
+    display: flex;
+    display: block;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.estilocuadrados img {
+    width: 90%;
+}
+
+.cuadrado1 { 
+    grid-area: cuadrado1; 
+}
+
+.cuadrado2 { 
+    grid-area: cuadrado2; 
+}
+
+.cuadrado3 { 
+    grid-area: cuadrado3; 
+}
+
+.cuadrado4 { 
+    grid-area: cuadrado4; 
+}
+
+.cuadrado5 { 
+    grid-area: cuadrado5; 
+}
+
+.cuadrado6 { 
+    grid-area: cuadrado6; 
+}
+
+.containerHeader {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%; 
+    grid-template-areas: 
+    ". . header header"
+    "logo logo header header"
+    ". . header header"
+    ". . header header"
+}
+.containerHome { 
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%; 
+    grid-template-areas: 
+    "frase2 frase2 frase2 frase2"
+    "titulo-a titulo-a titulo-a titulo-a"
+    "cuadrado1 cuadrado2 cuadrado3 cuadrado4"
+    "titulo-b titulo-b titulo-b titulo-b"
+    "cuadrado5 cuadrado5 cuadrado6 cuadrado6"
+    ". newsletter newsletter ."; 
+}
+
+.containerFooter {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%; 
+    grid-template-areas: 
+    ". contacto contacto ."
+    "datos datos datos datos"; 
+}
+
+/* PRODUCTS */
+
+.titulo-g {
+    grid-area: titulo-g;
+    padding: 30px 0px;
+}
+
+.nuestras-colecciones {
+    grid-area: nuestras-colecciones;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nuestras-colecciones img {
+    width: 100px;
+    padding: 10px;
+}
+
+.titulo-h {
+    grid-area: titulo-h;
+    padding: 30px 0px;
+}
+    
+.main-almohadones {
+    grid-area: main-almohadones;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main-almohadones img {
+    width: 100%;
+}
+
+.almohadon1 {
+    grid-area: almohadon1;
+    width: 100%;
+    padding: 10px;
+}
+
+.almohadon2 {
+    grid-area: almohadon2;
+    width: 100%;
+    padding: 10px;
+}
+
+.almohadon3 {
+    grid-area: almohadon3;
+    width: 100%;
+    padding: 10px;
+}
+
+.almohadon4 {
+    grid-area: almohadon4;
+    width: 100%;
+    padding: 10px;
+}
+
+.titulo-i {
+    grid-area: titulo-i;
+    padding: 30px 0px;
+}
+
+.Tabla {
+    grid-area: Tabla;
+    text-align: center;
+    width: 100%;
+}
+
+.titulo-j {
+    grid-area: titulo-j;
+    padding: 30px 0px;
+}
+
+table {
+    background-color: rgb(240, 238, 234);
+    text-align: center;
+}
+
+.tabla-colores {
+    grid-area: tabla-colores;
+}
+
+table, th, td {
+    border: 2px solid rgb(222, 220, 220);
+    border-collapse: collapse;
+    padding: 20px;
+}
+
+.titulo-k {
+    grid-area: titulo-k;
+    padding: 30px 0px;
+}
+
+.video-mantel {
+    grid-area: video-mantel;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+}
+
+.containerProducts { 
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%; 
+    grid-template-areas: 
+    ". titulo-g titulo-g ."
+    ". nuestras-colecciones nuestras-colecciones ."
+    ". titulo-h titulo-h ."
+    "main-almohadones main-almohadones almohadon1 almohadon2"
+    "main-almohadones main-almohadones almohadon3 almohadon4"
+    ". titulo-i titulo-i ."
+    ". Tabla Tabla ."
+    ". titulo-j titulo-j ."
+    ". tabla-colores tabla-colores ."
+    ". titulo-k titulo-k ."
+    ". video-mantel video-mantel ."
+    ". newsletter newsletter .";
+}
+
+/* NEWS */
+
+.titulo-e {
+    grid-area: titulo-e;
+    padding: 30px;
+}
+
+.titulo-f {
+    grid-area: titulo-f;
+    padding: 30px;
+}
+
+.Hygge {
+   grid-area: Hygge;
+}
+
+.video {
+    grid-area: video;
+    height: 400px;
+    padding: 10px;
+}
+
+.Rosa {
+    grid-area: Rosa;
+}
+
+.NewsP {
+    padding: 10px;
+}
+
+.Rosa img {
+    width: 100%;
+    padding: 10px;
+}
+    
+.containerNews {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%; 
+    grid-template-areas: 
+    ". titulo-e titulo-e ."
+    ". Hygge Hygge ."
+    ". video video ."
+    ". titulo-f titulo-f ."
+    ". Rosa Rosa ."
+    ". Rosa Rosa ."
+    ". newletter newsletter ."
+}
+
+/* ABOUT */
+
+.titulo-d {
+    grid-area: titulo-d;
+    padding: 30px;
+}
+
+.Meli {
+    grid-area: Meli;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Meli p {
+    padding: 30px 30px;
+}
+
+.Meli img {
+    padding: 0px 0px 30px 0px;
+}
+
+.calidad {
+    grid-area: calidad;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.calidad div {
+    font-size: 20px;
+    color: #cb7f0e;
+    padding: 10px;
+}
+
+.containerAbout {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%; 
+    grid-template-areas: 
+    "titulo-d titulo-d titulo-d titulo-d"
+    ". Meli Meli ."
+    ". calidad calidad ."
+    ". newsletter newsletter ."
+}
+    
+/* CONTACT */
+
+.Formulario {
+    width: 100%;
+    display: flex;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.mapa {
+    width: 90%;
+    text-align: start;
+    display: inline-block;
+    grid-area: mapa;
+}
+
+.mapa p {
+    margin-left: 30px;
+}
+
+.mapa span {
+    width: 100%;
+    display: inline-block;
+    padding: 0px 0px 25px 40px;
+}
+
+.mapa iframe {
+    margin-left: 40px;
+}
+
+.Form {
+    grid-area: form;
+    width: 90%;
+    text-align: start;
+    display: inline-block;
+}
+    
+.Form form label,.Form form input,.Form form textarea {
+    width: 100%;
+}
+
+.Form form label {
+    padding: 40px 0px;
+}
+
+.Form form div input {
+    width: 30%;
+}
+
+.Form form input:focus, .Form form textarea:focus {
+    outline-color: #936589; 
+}
+
+.Form form input:hover, .Form form textarea:hover {
+    cursor: pointer;
+}
+
+.containerContact {
+    display: grid;
+    grid-template-columns: 15% 35% 35% 15%; 
+    grid-template-areas: 
+    "titulo-c titulo-c titulo-c titulo-c"
+    ". mapa form .";
+}
+
+.titulo-c {
+    grid-area: titulo-c;
+    padding: 30px;
+} 
+
+/* MEDIA QUIERIES */
+
+@media screen and (max-width: 600px) {
+
+    /* HOME */
+
+    .containerHeader {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+        "header"
+        "header"
+        "logo";
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0px 50px 0px;
+    }
+
+        
+    .main_foto {
+        display: none;
+    }
+
+    .logo h1 {
+            font-size: 80px;
+    }
+
+    .logo h2 {
+        text-align: center;
+    }
+
+    .containerHome {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+        "frase2" 
+        "frase2"
+        "titulo-a"
+        "cuadrado1"
+        "cuadrado2"
+        "cuadrado3" 
+        "cuadrado4"
+        "titulo-b" 
+        "cuadrado5" 
+        "cuadrado6"
+        "newsletter"
+        "newsletter";
+    }
+
+    .estilocuadrados img {
+        width: 80%;
+    }
+        
+    .newsletter {
+        text-align: center;
+        padding: 20px ;
+    }
+        
+    .containerFooter {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+        "contacto"
+        "contacto"
+        "datos"
+        "datos";
+    }
+
+    .footer p:first-child {
+        font-size: 30px;
+    }
+        
+    .datos {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 0px 30px 0px;
+    }
+
+    .footer span {
+        width: 100%;
+        text-align: center;
+        padding: 3px;
+    }
+        
+    /* PRODUCTS*/
+
+    .containerProducts { 
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+        "titulo-g"
+        "nuestras-colecciones"
+        "titulo-h"
+        "main-almohadones"
+        "main-almohadones"
+        "almohadon1"
+        "almohadon2"
+        "almohadon3"
+        "almohadon4"
+        "titulo-i"
+        "Tabla"
+        "titulo-j"
+        "tabla-colores"
+        "titulo-k"
+        "video-mantel"
+        "video-mantel"
+        "newsletter"
+        "newsletter";
+    }
+
+    /* NEWS*/
+
+    .containerNews {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+        "titulo-e"
+        "Hygge"
+        "Hygge"
+        "video" 
+        "video"
+        "titulo-f"
+        "Rosa"
+        "Rosa"
+        "newsletter"
+        "newsletter";
+    }
+
+    /* ABOUT */
+
+    .containerAbout {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+        "header"
+        "header"
+        "titulo-d"
+        "Meli"
+        "Meli"
+        "calidad"
+        "calidad"
+        "newsletter"
+        "newsletter";
+    }
+
+    .Meli img {
+        width: 80%;
+    }
+
+    .Meli p {
+        padding: 20px 10px;
+    }
+
+    /* CONTACT */
+
+    .containerContact {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+        "titulo-c"
+        "mapa"
+        "mapa"
+        "form"
+        "form";
+    }
+
+    .Form {
+        width: 100%;
+        text-align: start;
+        padding: 30px 15px;
+    }
+}
