@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;1,200&family=Roboto:wght@300&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/2dd8aefea8.js" crossorigin="anonymous"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
 
     <body>
@@ -32,11 +33,26 @@
                 <h2>¡Hola! Soy Meli</h2>
             </div>
             
+            <p class="bio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, voluptas est enim illum corrupti alias deleniti dolorum repellendus cumque, ex nesciunt excepturi pariatur eius! Adipisci ratione magnam sunt ipsam illo Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus culpa corporis corrupti eos quis provident natus rem beatae. Cupiditate nam alias dolorem delectus quis aut quasi, earum tenetur. Pariatur, id.
+            </p>
+            
             <div class="Meli">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, voluptas est enim illum corrupti alias deleniti dolorum repellendus cumque, ex nesciunt excepturi pariatur eius! Adipisci ratione magnam sunt ipsam illo Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus culpa corporis corrupti eos quis provident natus rem beatae. Cupiditate nam alias dolorem delectus quis aut quasi, earum tenetur. Pariatur, id.
-                </p>
-                <img src="../pictures/Meli.png" alt="HolaSoyMeli">
+                
+                <div data-aos="flip-left">
+                    <img src="../pictures/Meli.png" alt="HolaSoyMeli">
+                </div>
+                
+                <div class="orquidea">
+                    <img   src="../Pictures/aboutOrquidea.png" alt="dibujo de orquideas">
+                </div>
+                
+                <div class="aboutFrase">
+                    <img src="../Pictures/aboutFrase.png" alt="frase">
+                </div>
+
+                <div class="aboutFondo"></div>
+
             </div>
             
             <section class="calidad">
@@ -92,6 +108,10 @@
                     Email: info@bharani.com.ar
                 </span>
             </section>
-        </footer>    
+        </footer>
     </body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script>
+        AOS.init();
+    </script>
 </html>

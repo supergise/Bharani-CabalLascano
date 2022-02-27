@@ -83,11 +83,47 @@ input, textarea {
 .socialMedia a {
     display: inline-flex;
     flex-direction: row;
-    color: #936589;
     font-size: 30px;
     width: 40px;
     height: 70px;
     justify-content: center;
+    background: linear-gradient(90deg, #fbcb84, #cb6acd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
+.socialMedia a:hover {
+    animation: saltar 1s ease-in-out 1 normal both;
+}
+
+@keyframes saltar {
+    from {
+        transform: translateY(0) scale(1,1);
+    }
+    15% {
+        transform: translateY(-1rem) scale(1,1.2);
+    }
+    35%,
+    45% {
+        transform: translateY(-2.8rem) scale(1,1.08);
+    }
+   
+    65%,
+    to {
+        transform: translateY(0) scale(1,1);
+    }
+    
+    75% { 
+        transform: translateY(.5rem) scale (1.2,8);
+    }
+    85% {
+        transform: translateY(0) scale(1.2,.8);
+    }
+    
+    95% {
+        transform: translateY(0) scale(1,1);
+    }
 }
 
 .socialMedia a + a {
@@ -140,11 +176,146 @@ input, textarea {
     -webkit-background-clip: text;
     -webkit-text-fill-color:transparent;
     text-align: center;
+    
 }
   
 .logo h2 {
     color: #936589;
     text-align: end;
+}
+
+/* Fondo animado */
+
+.fondo-animado {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+span.uno, 
+span.dos, 
+span.tres, 
+span.cuatro {
+    border: 0;
+    display: block;
+    position: absolute;
+    animation: vuelta 5s linear normal both;
+}
+
+span.uno {
+    font-size: 15px;
+    top: -100px;
+    color: rgb(216, 174, 211);
+}
+
+span.dos {
+    font-size: 20px;
+    top: -70px;
+    color: rgb(240, 208, 163);
+}
+
+span.tres {
+    font-size: 10px;
+    top: -50px;
+    color: rgb(205, 155, 152);
+}
+
+span.cuatro {
+    font-size: 12px;
+    top: -20px;
+    color: rgb(211, 156, 204);
+}
+    
+@keyframes vuelta {
+    from {
+        transform: rotate(0deg);
+        top: 0;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    to {
+        transform: rotate(360deg);
+        top: calc(60% + 100px);
+        opacity: 0;
+    }
+}
+
+.fondo-animado span:nth-child(1) {
+    left: 5%;
+}
+
+.fondo-animado span:nth-child(2) {
+    left: 50%;
+}
+
+.fondo-animado span:nth-child(3) {
+    left: 35%;
+}
+
+.fondo-animado span:nth-child(4) {
+    left: 75%;
+}
+
+.fondo-animado span:nth-child(5) {
+    left: 25%;
+}
+
+.fondo-animado span:nth-child(6) {
+    left: 85%;
+}
+
+.fondo-animado span:nth-child(7) {
+    left: 90%;
+}
+
+.fondo-animado span:nth-child(8) {
+    left: 65%;
+}
+
+.fondo-animado span:nth-child(9) {
+    left: 60%;
+}
+
+.fondo-animado span:nth-child(10) {
+    left: 75%;
+}
+
+.fondo-animado span:nth-child(11) {
+    left: 10%;
+}
+
+.fondo-animado span:nth-child(12) {
+    left: 55%;
+}
+
+span.delay-1 {
+    animation-delay: 1s;
+}
+
+span.delay-2 {
+    animation-delay: 2s;
+}
+
+span.delay-3 {
+    animation-delay: 3s;
+}
+
+span.delay-4 {
+    animation-delay: 4s;
+}
+
+span.delay-5 {
+    animation-delay: 5s;
+}
+
+span.delay-6 {
+    animation-delay: 6s;
 }
 
 .frase2 {
@@ -409,21 +580,59 @@ table, th, td {
 .titulo-d {
     grid-area: titulo-d;
     padding: 30px;
+    Font-family: "Nunito";
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #eabc79, #cb6acd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    text-align: center;
+}
+
+.bio {
+    grid-area: bio;
+    padding: 30px 80px;
 }
 
 .Meli {
     grid-area: Meli;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-direction: row;
+    position: relative;
+    height: 800px;
 }
 
-.Meli p {
-    padding: 30px 30px;
+.orquidea {
+   position: absolute;
+   margin: 200px 900px 0px 0px;
 }
 
-.Meli img {
-    padding: 0px 0px 30px 0px;
+.orquidea img {
+    height: 500px;
+    z-index: 3;
+}
+
+.aboutFrase {
+   position: absolute;
+}
+
+.aboutFrase img {
+    height: 300px;
+    margin: 0px 0px 300px 900px;
+}
+
+.aboutFondo {
+    background-color: #f4e0e0;
+    height: 650px;
+    width: 600px;
+    position: absolute;
+    z-index: -1;
+    margin: 0px 200px 0px 0px;
 }
 
 .calidad {
@@ -445,9 +654,9 @@ table, th, td {
     grid-template-columns: 25% 25% 25% 25%; 
     grid-template-areas: 
     "titulo-d titulo-d titulo-d titulo-d"
-    ". Meli Meli ."
+    "bio bio bio bio"
+    "Meli Meli Meli Meli"
     ". calidad calidad ."
-    ". newsletter newsletter ."
 }
     
 /* CONTACT */
@@ -548,7 +757,7 @@ table, th, td {
     }
 
     .logo h1 {
-            font-size: 80px;
+        font-size: 60px;
     }
 
     .logo h2 {
@@ -634,6 +843,11 @@ table, th, td {
         "newsletter";
     }
 
+    .nuestras-colecciones img {
+        width: 85%;
+        padding: 0px 10px;
+    }
+    
     /* NEWS*/
 
     .containerNews {
@@ -658,23 +872,54 @@ table, th, td {
         display: grid;
         grid-template-columns: 1fr; 
         grid-template-areas: 
-        "header"
-        "header"
         "titulo-d"
+        "bio"
+        "Meli"
+        "Meli"
         "Meli"
         "Meli"
         "calidad"
-        "calidad"
-        "newsletter"
-        "newsletter";
+        "calidad";
+    }
+
+    .Meli {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .titulo-d {
+        font-size: 20px;
+    }
+
+    .bio {
+        padding: 20px 30px;
     }
 
     .Meli img {
-        width: 80%;
+        width: 100%;
+        padding: 0px 20px;
     }
 
-    .Meli p {
-        padding: 20px 10px;
+    .orquidea {
+        margin: 0px 300px 400px 0px;
+    }
+
+    .orquidea img {
+       height: 25%;
+    }
+
+    .aboutFrase img {
+       height: 20%;
+       margin: 0px 0px 600px 120px;
+    }
+
+    .aboutFondo {
+        height: 600px;
+        width: 600px;
+        padding: 20px 20px;
+      
     }
 
     /* CONTACT */
@@ -690,6 +935,22 @@ table, th, td {
         "form";
     }
 
+    .mapa {
+        padding: 1rem;
+    }
+
+    .mapa p {
+        margin-left: 0;
+    }
+
+    .mapa span {
+        padding: 0;
+    }
+
+    .mapa iframe {
+        margin-left: 0;
+    }
+    
     .Form {
         width: 100%;
         text-align: start;
