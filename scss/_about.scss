@@ -1,0 +1,59 @@
+.sub-Meli {
+    padding: 10px;
+    text-transform: uppercase;
+    background: linear-gradient(1deg,#cb6acd, #eabc79);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+
+    h2 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+}   
+        
+.bio {
+    padding: 0px 20px;
+    p {
+        font-size: 20px;
+    }
+}
+
+.Meli {
+    height: 800px;
+}
+
+.orquidea {
+   position: absolute;
+   padding-left: 80px;
+
+   img {
+        height: 500px;
+        z-index: 3;
+    }
+}
+
+.about-frase {
+   position: absolute;
+   padding: 50px 0px 0px 600px;
+
+   img {
+        height: 200px;
+    }
+}
+
+.about-fondo {
+    background-color: #f4e0e0;
+    height: 650px;
+    width: 600px;
+    position: absolute;
+    z-index: -50;
+    margin: 50px 0px 0px 400px;
+}
+
+.calidad {
+    font-size: 20px;
+    font-weight: 600;
+    color: $mustar;
+    padding: 10px;
+}
