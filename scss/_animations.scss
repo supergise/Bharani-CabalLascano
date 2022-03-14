@@ -1,0 +1,187 @@
+/* FONDO ANIMADO HOME */
+
+.fondo-animado {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    span {
+        border: 0;
+        display: block;
+        position: absolute;
+        animation: vuelta 5s linear normal both;
+
+        &.uno {
+            font-size: 15px;
+            top: -100px;
+            color: rgb(216, 174, 211);
+        }
+
+        &.dos {
+            font-size: 20px;
+            top: -70px;
+            color: rgb(240, 208, 163);
+        }
+        
+        &.tres {
+            font-size: 10px;
+            top: -50px;
+            color: rgb(205, 155, 152);
+        }
+        
+        &.cuatro {
+            font-size: 12px;
+            top: -20px;
+            color: rgb(211, 156, 204);
+        }
+
+        &:nth-child(1) {
+            left: 5%;
+        }
+
+        &:nth-child(2) {
+            left: 50%;
+        }
+
+        &:nth-child(3) {
+            left: 35%;
+        }
+        span:nth-child(4) {
+            left: 75%;
+        }
+    
+        &:nth-child(5) {
+            left: 25%;
+        }
+    
+        &:nth-child(6) {
+            left: 85%;
+        }
+    
+        &:nth-child(7) {
+            left: 90%;
+        }
+    
+        &:nth-child(8) {
+            left: 65%;
+        }
+    
+        &:nth-child(9) {
+            left: 60%;
+        }
+    
+        &:nth-child(10) {
+            left: 75%;
+        }
+    
+        &:nth-child(11) {
+            left: 10%;
+        }
+    
+        &:nth-child(12) {
+            left: 55%;
+        }
+
+        &.delay-1 {
+            animation-delay: 1s;
+        }
+        
+        &.delay-2 {
+            animation-delay: 2s;
+        }
+        
+        &.delay-3 {
+            animation-delay: 3s;
+        }
+        
+        &.delay-4 {
+            animation-delay: 4s;
+        }
+        
+        &.delay-5 {
+            animation-delay: 5s;
+        }
+        
+        &.delay-6 {
+            animation-delay: 6s;
+        }
+    }
+}
+
+@keyframes vuelta {
+    from {
+        transform: rotate(0deg);
+        top: 0;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    to {
+        transform: rotate(360deg);
+        top: calc(60% + 100px);
+        opacity: 0;
+    }
+}
+
+/* ICONOS ANIMADOS REDES SOCIALES */
+
+.socialMedia a {
+    font-size: 30px;
+    height: 80px;
+    text-decoration: none;
+    background: linear-gradient(90deg, #fbcb84, #cb6acd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+
+    &:hover {
+        animation: saltar 1s ease-in-out 1 normal both;
+    }
+
+    & + a {
+        margin-left: 1rem;
+    }
+}
+
+@keyframes saltar {
+    from {
+        transform: translateY(0) scale(1,1);
+    }
+
+    15% {
+        transform: translateY(-1rem) scale(1,1.2);
+    }
+
+    35% {
+        transform: translateY(-2.8rem) scale(1,1.08);
+    }
+
+    45% {
+        transform: translateY(-2.8rem) scale(1,1.08);
+    }
+
+    65% {
+        transform: translateY(0) scale(1,1);
+    }
+    
+    75% { 
+        transform: translateY(.5rem) scale (1.2,8);
+    }
+    
+    85% {
+        transform: translateY(0) scale(1.2,.8);
+    }
+    
+    95% {
+        transform: translateY(0) scale(1,1);
+    }
+
+    to {
+        transform: translateY(0) scale(1,1);
+    }
+}

@@ -1,0 +1,48 @@
+.Formulario {
+    width: 100%;
+    padding: 0px 50px;
+}
+
+.mapa {
+    p {
+        margin-left: 30px;
+    }
+
+    span {
+        width: 100%;
+        padding: 0px 10px 25px 40px;
+    }
+
+    iframe {
+        margin-left: 20px;
+    }
+}
+
+.Form {
+    text-align: start;
+
+    form {
+        label {
+            padding: 10px 0px;
+        }
+
+        div input {
+            width: 100%;
+        }
+
+        input:hover,
+        textarea:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid $grey;
+}
+
+.buttons {
+    padding: 10px 20px;
+}

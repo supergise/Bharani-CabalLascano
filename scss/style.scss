@@ -1,0 +1,154 @@
+@import "variables";
+@import "home";
+@import "products";
+@import "news";
+@import "about";
+@import "contact";
+@import "animations";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    color: $grey;
+
+    .gradient-background {
+        position: fixed;
+        top: 0;
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+        background-attachment: scroll;
+        user-select: none;
+        pointer-events: none;
+
+        .gradient1 {
+        position: absolute;
+        top: -25%;
+        left: -25%;
+        width: 100%;
+        max-width: calc(20vw + 25%);
+        height: 100%;
+        max-height: calc(20vh + 25%);
+        background-image: radial-gradient( 50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        transform: translate(-25%, -25%) scale(2);
+        opacity: 1;
+        }
+
+        .gradient2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: calc(20vw + 25%);
+        height: 100%;
+        max-height: calc(20vh + 25%);
+        background: radial-gradient( 50% 50% at 50% 50%,#EACDCD 0%, rgba(255, 255, 255, 0) 100%);
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        transform: translate(50%, 50%) scale(1.5);
+        opacity: 1;
+        }
+    }
+}
+
+.navbar {
+    &-nav a {
+        font-size: 1.2rem;
+        color: $gpink;
+        font-weight: 300;
+    
+        &:hover {
+            color: $mustar;
+        } 
+    }
+
+    &-brand img {
+        height: 70px;
+    }
+
+    &-toggler {
+        background-color: transparent;
+    
+        i {
+            color: $gpink;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+}
+    
+h3 {
+    color: $gpink;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.subtitulos {
+    padding: 30px;
+    text-align: center;
+}
+
+footer {
+    font-size: 1rem;
+    padding: 20px;
+    
+    .footer {
+        padding: 10px;
+    }
+}
+
+.btn-primary {
+    color: $cream; 
+    background-color: $gpink;
+    border: none;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: #a5809f;
+    }
+}
+
+.newsletter {
+    padding: 100px;
+}
+
+.contacto {
+    height: 200px;
+    align-items: center;
+}
+
+@media (max-width: 576px) {
+    .logo h1 {
+        font-size: 70px;
+    }
+    
+    .video-mantel {
+        width: 100%;
+    }
+    
+    .Meli img {
+        width: 100%;
+    }
+
+    .mapa {
+        p {
+        width: 90%;
+        padding-left: 0px;
+        }
+
+        iframe {
+            padding-right: 20px;
+            padding-left: 0px;
+        }
+    }
+}
