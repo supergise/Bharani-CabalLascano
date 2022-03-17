@@ -1,15 +1,9 @@
 .logo h1 {
-  font-style: normal;
   font-size: 80px;
-  font-weight: 100;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #eabc79, #cb6acd);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  font-weight: 100; }
 
 .logo h2 {
-  color: #936589;
+  color: #545353;
   text-align: end;
   font-weight: 300;
   font-size: 20px; }
@@ -118,16 +112,10 @@
   width: 80%;
   padding: 10px; }
 
-.sub-Meli {
-  padding: 10px;
-  text-transform: uppercase;
-  background: linear-gradient(1deg, #cb6acd, #eabc79);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-  .sub-Meli h2 {
-    font-size: 40px;
-    font-weight: 600; }
+.sub-Meli h2 {
+  font-size: 40px;
+  font-weight: 600;
+  padding: 10px; }
 
 .bio {
   padding: 0px 20px; }
@@ -209,27 +197,27 @@ input, textarea {
     animation: vuelta 5s linear normal both; }
     .fondo-animado span.uno {
       font-size: 15px;
-      top: -100px;
-      color: #d8aed3; }
+      color: #d8aed3;
+      top: -100px; }
     .fondo-animado span.dos {
       font-size: 20px;
-      top: -70px;
-      color: #f0d0a3; }
+      color: #f0d0a3;
+      top: -70px; }
     .fondo-animado span.tres {
       font-size: 10px;
-      top: -50px;
-      color: #cd9b98; }
+      color: #cd9b98;
+      top: -50px; }
     .fondo-animado span.cuatro {
       font-size: 12px;
-      top: -20px;
-      color: #d39ccc; }
+      color: #d39ccc;
+      top: -20px; }
     .fondo-animado span:nth-child(1) {
       left: 5%; }
     .fondo-animado span:nth-child(2) {
       left: 50%; }
     .fondo-animado span:nth-child(3) {
       left: 35%; }
-    .fondo-animado span span:nth-child(4) {
+    .fondo-animado span:nth-child(4) {
       left: 75%; }
     .fondo-animado span:nth-child(5) {
       left: 25%; }
@@ -258,7 +246,7 @@ input, textarea {
     .fondo-animado span.delay-5 {
       animation-delay: 5s; }
     .fondo-animado span.delay-6 {
-      animation-delay: 6s; }
+      animation-delay: 5s; }
 
 @keyframes vuelta {
   from {
@@ -308,6 +296,14 @@ input, textarea {
   to {
     transform: translateY(0) scale(1, 1); } }
 
+.logogradient, .logo h1, .sub-Meli {
+  font-style: normal;
+  text-transform: uppercase;
+  background: linear-gradient(1deg, #cb6acd, #eabc79);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
 * {
   padding: 0;
   margin: 0;
@@ -316,7 +312,7 @@ input, textarea {
 body {
   font-family: "Nunito", sans-serif;
   color: #545353; }
-  body .gradient-background {
+  body .gradientBackground {
     position: fixed;
     top: 0;
     z-index: -1;
@@ -325,32 +321,25 @@ body {
     background-attachment: scroll;
     user-select: none;
     pointer-events: none; }
-    body .gradient-background .gradient1 {
+    body .gradientBackground gradient, body .gradientBackground .gradient1, body .gradientBackground .gradient2 {
       position: absolute;
+      width: 100%;
+      max-width: calc(20vw + 25%);
+      height: 100%;
+      max-height: calc(20vh + 25%);
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      opacity: 1; }
+    body .gradientBackground .gradient1 {
       top: -25%;
       left: -25%;
-      width: 100%;
-      max-width: calc(20vw + 25%);
-      height: 100%;
-      max-height: calc(20vh + 25%);
-      background-image: radial-gradient(50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      transform: translate(-25%, -25%) scale(2);
-      opacity: 1; }
-    body .gradient-background .gradient2 {
-      position: absolute;
+      background: radial-gradient(50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
+      transform: translate(-25%, -25%) scale(2); }
+    body .gradientBackground .gradient2 {
       right: 0;
       bottom: 0;
-      width: 100%;
-      max-width: calc(20vw + 25%);
-      height: 100%;
-      max-height: calc(20vh + 25%);
       background: radial-gradient(50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      transform: translate(50%, 50%) scale(1.5);
-      opacity: 1; }
+      transform: translate(50%, 50%) scale(1.5); }
 
 .navbar-nav a {
   font-size: 1.2rem;
@@ -370,9 +359,9 @@ body {
     box-shadow: none; }
 
 h3 {
-  color: #936589;
+  color: #545353;
   padding: 10px;
-  font-size: 25px; }
+  font-size: 22px; }
 
 .subtitulos {
   padding: 30px;

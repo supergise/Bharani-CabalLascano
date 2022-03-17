@@ -1,4 +1,10 @@
 /* FONDO ANIMADO HOME */
+@mixin styleStar ($starsize, $starcolor, $startop ) { 
+    font-size: $starsize;
+    color: $starcolor;
+    top: $startop;
+    
+}
 
 .fondo-animado {
     position: absolute;
@@ -13,29 +19,21 @@
         animation: vuelta 5s linear normal both;
 
         &.uno {
-            font-size: 15px;
-            top: -100px;
-            color: rgb(216, 174, 211);
+            @include styleStar( 15px, rgb(216, 174, 211), -100px);
         }
-
+        
         &.dos {
-            font-size: 20px;
-            top: -70px;
-            color: rgb(240, 208, 163);
+            @include styleStar( 20px, rgb(240, 208, 163), -70px);
         }
         
         &.tres {
-            font-size: 10px;
-            top: -50px;
-            color: rgb(205, 155, 152);
+            @include styleStar( 10px, rgb(205, 155, 152), -50px);
+        }
+            
+        &.cuatro {
+            @include styleStar( 12px, rgb(211, 156, 204), -20px);
         }
         
-        &.cuatro {
-            font-size: 12px;
-            top: -20px;
-            color: rgb(211, 156, 204);
-        }
-
         &:nth-child(1) {
             left: 5%;
         }
@@ -47,7 +45,7 @@
         &:nth-child(3) {
             left: 35%;
         }
-        span:nth-child(4) {
+        &:nth-child(4) {
             left: 75%;
         }
     
@@ -104,7 +102,7 @@
         }
         
         &.delay-6 {
-            animation-delay: 6s;
+            animation-delay: 5s;
         }
     }
 }
