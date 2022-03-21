@@ -19,6 +19,17 @@ $cream: #F5F5DC;
     -webkit-text-fill-color:transparent;
 }
 
+gradient {
+    position: absolute;
+    width: 100%;
+    max-width: calc(20vw + 25%);
+    height: 100%;
+    max-height: calc(20vh + 25%);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    opacity: 1;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -38,18 +49,7 @@ body {
         background-attachment: scroll;
         user-select: none;
         pointer-events: none;
-
-        gradient {
-            position: absolute;
-            width: 100%;
-            max-width: calc(20vw + 25%);
-            height: 100%;
-            max-height: calc(20vh + 25%);
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-            opacity: 1;
-        }
-
+        
         .gradient1 {
             @extend gradient;
             top: -25%;
@@ -99,12 +99,8 @@ body {
     
 h3 {
     color: $grey;
-    padding: 10px;
-    font-size: 22px;
-}
-
-.subtitulos {
     padding: 30px;
+    font-size: 22px;
     text-align: center;
 }
 

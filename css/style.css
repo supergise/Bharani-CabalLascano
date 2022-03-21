@@ -91,13 +91,13 @@
     height: 100%; }
 
 .grupo-almohadones {
-  padding-top: 20px;
-  transition: all 500ms ease;
-  overflow: hidden; }
+  padding-top: 20px; }
   .grupo-almohadones img {
     border-radius: 5px;
     transition: all 500ms ease; }
     .grupo-almohadones img:hover {
+      overflow: hidden;
+      transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
       transform: scale(1.2);
       cursor: pointer; }
 
@@ -149,10 +149,11 @@
 .calidad {
   font-size: 20px;
   font-weight: 600;
-  color: #cb7f0e;
-  padding: 10px; }
+  color: #545353;
+  padding: 10px;
+  text-align: center; }
 
-.Formulario {
+.Form {
   width: 100%;
   padding: 0px 50px; }
 
@@ -166,14 +167,14 @@
 .mapa iframe {
   margin-left: 20px; }
 
-.Form {
+.styleForm {
   text-align: start; }
-  .Form form label {
+  .styleForm form label {
     padding: 10px 0px; }
-  .Form form div input {
+  .styleForm form div input {
     width: 100%; }
-  .Form form input:hover,
-  .Form form textarea:hover {
+  .styleForm form input:hover,
+  .styleForm form textarea:hover {
     cursor: pointer; }
 
 input, textarea {
@@ -184,7 +185,7 @@ input, textarea {
 .buttons {
   padding: 10px 20px; }
 
-/* FONDO ANIMADO HOME */
+/* HOME FONDO ANIMADO DE ESTRELLAS  */
 .fondo-animado {
   position: absolute;
   width: 100%;
@@ -194,7 +195,7 @@ input, textarea {
     border: 0;
     display: block;
     position: absolute;
-    animation: vuelta 5s linear normal both; }
+    animation: vuelta 3s linear normal both; }
     .fondo-animado span.uno {
       font-size: 15px;
       color: #d8aed3;
@@ -229,7 +230,7 @@ input, textarea {
       left: 65%; }
     .fondo-animado span:nth-child(9) {
       left: 60%; }
-    .fondo-animado span:nth-child(10) {
+    .fondo-animado span:nth-child(4) {
       left: 75%; }
     .fondo-animado span:nth-child(11) {
       left: 10%; }
@@ -242,11 +243,11 @@ input, textarea {
     .fondo-animado span.delay-3 {
       animation-delay: 3s; }
     .fondo-animado span.delay-4 {
-      animation-delay: 4s; }
+      animation-delay: 5s; }
     .fondo-animado span.delay-5 {
-      animation-delay: 5s; }
+      animation-delay: 2s; }
     .fondo-animado span.delay-6 {
-      animation-delay: 5s; }
+      animation-delay: 4s; }
 
 @keyframes vuelta {
   from {
@@ -264,13 +265,13 @@ input, textarea {
 
 /* ICONOS ANIMADOS REDES SOCIALES */
 .socialMedia a {
-  font-size: 30px;
-  height: 80px;
-  text-decoration: none;
   background: linear-gradient(90deg, #fbcb84, #cb6acd);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  height: 80px;
+  text-decoration: none; }
   .socialMedia a:hover {
     animation: saltar 1s ease-in-out 1 normal both; }
   .socialMedia a + a {
@@ -288,7 +289,7 @@ input, textarea {
   65% {
     transform: translateY(0) scale(1, 1); }
   75% {
-    transform: translateY(0.5rem) scale 1.2, 8; }
+    transform: translateY(0.5rem) scale(1.2, 0.8); }
   85% {
     transform: translateY(0) scale(1.2, 0.8); }
   95% {
@@ -303,6 +304,16 @@ input, textarea {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
+
+gradient, body .gradientBackground .gradient1, body .gradientBackground .gradient2 {
+  position: absolute;
+  width: 100%;
+  max-width: calc(20vw + 25%);
+  height: 100%;
+  max-height: calc(20vh + 25%);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  opacity: 1; }
 
 * {
   padding: 0;
@@ -321,15 +332,6 @@ body {
     background-attachment: scroll;
     user-select: none;
     pointer-events: none; }
-    body .gradientBackground gradient, body .gradientBackground .gradient1, body .gradientBackground .gradient2 {
-      position: absolute;
-      width: 100%;
-      max-width: calc(20vw + 25%);
-      height: 100%;
-      max-height: calc(20vh + 25%);
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      opacity: 1; }
     body .gradientBackground .gradient1 {
       top: -25%;
       left: -25%;
@@ -360,11 +362,8 @@ body {
 
 h3 {
   color: #545353;
-  padding: 10px;
-  font-size: 22px; }
-
-.subtitulos {
   padding: 30px;
+  font-size: 22px;
   text-align: center; }
 
 footer {

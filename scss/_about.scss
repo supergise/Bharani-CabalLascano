@@ -1,5 +1,6 @@
 .sub-Meli {
     @extend .logogradient;
+
     h2 {
         font-size: 40px;
         font-weight: 600;
@@ -50,6 +51,7 @@
 .calidad {
     font-size: 20px;
     font-weight: 600;
-    color: $mustar;
+    color: $grey;
     padding: 10px;
+    text-align: center;
 }
