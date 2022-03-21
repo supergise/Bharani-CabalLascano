@@ -1,3 +1,93 @@
+.logogradient, .logo h1, .sub-Meli {
+  font-style: normal;
+  text-transform: uppercase;
+  background: linear-gradient(1deg, #cb6acd, #eabc79);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+gradient, body .gradientBackground .gradient1, body .gradientBackground .gradient2 {
+  position: absolute;
+  width: 100%;
+  max-width: calc(20vw + 25%);
+  height: 100%;
+  max-height: calc(20vh + 25%);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  opacity: 1; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #545353; }
+  body .gradientBackground {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-attachment: scroll;
+    user-select: none;
+    pointer-events: none; }
+    body .gradientBackground .gradient1 {
+      top: -25%;
+      left: -25%;
+      background: radial-gradient(50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
+      transform: translate(-25%, -25%) scale(2); }
+    body .gradientBackground .gradient2 {
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
+      transform: translate(50%, 50%) scale(1.5); }
+
+.navbar-nav a {
+  font-size: 1.2rem;
+  color: #936589;
+  font-weight: 300; }
+  .navbar-nav a:hover {
+    color: #cb7f0e; }
+
+.navbar-brand img {
+  height: 70px; }
+
+.navbar-toggler {
+  background-color: transparent; }
+  .navbar-toggler i {
+    color: #936589; }
+  .navbar-toggler:focus {
+    box-shadow: none; }
+
+h3 {
+  color: #545353;
+  padding: 30px;
+  font-size: 22px;
+  text-align: center; }
+
+footer {
+  font-size: 1rem;
+  padding: 20px; }
+  footer .footer {
+    padding: 10px; }
+
+.btn-primary {
+  color: #F5F5DC;
+  background-color: #936589;
+  border: none;
+  border-radius: 5px; }
+  .btn-primary:hover {
+    background-color: #a5809f; }
+
+.newsletter {
+  padding: 100px; }
+
+.contacto {
+  height: 200px;
+  align-items: center; }
+
 .logo h1 {
   font-size: 80px;
   font-weight: 100; }
@@ -296,96 +386,6 @@ input, textarea {
     transform: translateY(0) scale(1, 1); }
   to {
     transform: translateY(0) scale(1, 1); } }
-
-.logogradient, .logo h1, .sub-Meli {
-  font-style: normal;
-  text-transform: uppercase;
-  background: linear-gradient(1deg, #cb6acd, #eabc79);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-gradient, body .gradientBackground .gradient1, body .gradientBackground .gradient2 {
-  position: absolute;
-  width: 100%;
-  max-width: calc(20vw + 25%);
-  height: 100%;
-  max-height: calc(20vh + 25%);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  opacity: 1; }
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
-
-body {
-  font-family: "Nunito", sans-serif;
-  color: #545353; }
-  body .gradientBackground {
-    position: fixed;
-    top: 0;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background-attachment: scroll;
-    user-select: none;
-    pointer-events: none; }
-    body .gradientBackground .gradient1 {
-      top: -25%;
-      left: -25%;
-      background: radial-gradient(50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
-      transform: translate(-25%, -25%) scale(2); }
-    body .gradientBackground .gradient2 {
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
-      transform: translate(50%, 50%) scale(1.5); }
-
-.navbar-nav a {
-  font-size: 1.2rem;
-  color: #936589;
-  font-weight: 300; }
-  .navbar-nav a:hover {
-    color: #cb7f0e; }
-
-.navbar-brand img {
-  height: 70px; }
-
-.navbar-toggler {
-  background-color: transparent; }
-  .navbar-toggler i {
-    color: #936589; }
-  .navbar-toggler:focus {
-    box-shadow: none; }
-
-h3 {
-  color: #545353;
-  padding: 30px;
-  font-size: 22px;
-  text-align: center; }
-
-footer {
-  font-size: 1rem;
-  padding: 20px; }
-  footer .footer {
-    padding: 10px; }
-
-.btn-primary {
-  color: #F5F5DC;
-  background-color: #936589;
-  border: none;
-  border-radius: 5px; }
-  .btn-primary:hover {
-    background-color: #a5809f; }
-
-.newsletter {
-  padding: 100px; }
-
-.contacto {
-  height: 200px;
-  align-items: center; }
 
 @media (max-width: 576px) {
   .logo h1 {
