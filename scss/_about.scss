@@ -1,16 +1,13 @@
 .sub-Meli {
-    padding: 10px;
-    text-transform: uppercase;
-    background: linear-gradient(1deg,#cb6acd, #eabc79);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
+    @extend .logogradient;
 
     h2 {
         font-size: 40px;
         font-weight: 600;
+        padding: 10px;
     }
 }   
+    
         
 .bio {
     padding: 0px 20px;
@@ -54,6 +51,7 @@
 .calidad {
     font-size: 20px;
     font-weight: 600;
-    color: $mustar;
+    color: $grey;
     padding: 10px;
+    text-align: center;
 }

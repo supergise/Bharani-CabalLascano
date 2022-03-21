@@ -1,15 +1,99 @@
-.logo h1 {
+.logogradient, .logo h1, .sub-Meli {
   font-style: normal;
-  font-size: 80px;
-  font-weight: 100;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #eabc79, #cb6acd);
+  background: linear-gradient(1deg, #cb6acd, #eabc79);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
-.logo h2 {
+gradient, body .gradientBackground .gradient1, body .gradientBackground .gradient2 {
+  position: absolute;
+  width: 100%;
+  max-width: calc(20vw + 25%);
+  height: 100%;
+  max-height: calc(20vh + 25%);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  opacity: 1; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #545353; }
+  body .gradientBackground {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-attachment: scroll;
+    user-select: none;
+    pointer-events: none; }
+    body .gradientBackground .gradient1 {
+      top: -25%;
+      left: -25%;
+      background: radial-gradient(50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
+      transform: translate(-25%, -25%) scale(2); }
+    body .gradientBackground .gradient2 {
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
+      transform: translate(50%, 50%) scale(1.5); }
+
+.navbar-nav a {
+  font-size: 1.2rem;
   color: #936589;
+  font-weight: 300; }
+  .navbar-nav a:hover {
+    color: #cb7f0e; }
+
+.navbar-brand img {
+  height: 70px; }
+
+.navbar-toggler {
+  background-color: transparent; }
+  .navbar-toggler i {
+    color: #936589; }
+  .navbar-toggler:focus {
+    box-shadow: none; }
+
+h3 {
+  color: #545353;
+  padding: 30px;
+  font-size: 22px;
+  text-align: center; }
+
+footer {
+  font-size: 1rem;
+  padding: 20px; }
+  footer .footer {
+    padding: 10px; }
+
+.btn-primary {
+  color: #F5F5DC;
+  background-color: #936589;
+  border: none;
+  border-radius: 5px; }
+  .btn-primary:hover {
+    background-color: #a5809f; }
+
+.newsletter {
+  padding: 100px; }
+
+.contacto {
+  height: 200px;
+  align-items: center; }
+
+.logo h1 {
+  font-size: 80px;
+  font-weight: 100; }
+
+.logo h2 {
+  color: #545353;
   text-align: end;
   font-weight: 300;
   font-size: 20px; }
@@ -97,13 +181,13 @@
     height: 100%; }
 
 .grupo-almohadones {
-  padding-top: 20px;
-  transition: all 500ms ease;
-  overflow: hidden; }
+  padding-top: 20px; }
   .grupo-almohadones img {
     border-radius: 5px;
     transition: all 500ms ease; }
     .grupo-almohadones img:hover {
+      overflow: hidden;
+      transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
       transform: scale(1.2);
       cursor: pointer; }
 
@@ -118,16 +202,10 @@
   width: 80%;
   padding: 10px; }
 
-.sub-Meli {
-  padding: 10px;
-  text-transform: uppercase;
-  background: linear-gradient(1deg, #cb6acd, #eabc79);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-  .sub-Meli h2 {
-    font-size: 40px;
-    font-weight: 600; }
+.sub-Meli h2 {
+  font-size: 40px;
+  font-weight: 600;
+  padding: 10px; }
 
 .bio {
   padding: 0px 20px; }
@@ -161,10 +239,11 @@
 .calidad {
   font-size: 20px;
   font-weight: 600;
-  color: #cb7f0e;
-  padding: 10px; }
+  color: #545353;
+  padding: 10px;
+  text-align: center; }
 
-.Formulario {
+.Form {
   width: 100%;
   padding: 0px 50px; }
 
@@ -178,14 +257,14 @@
 .mapa iframe {
   margin-left: 20px; }
 
-.Form {
+.styleForm {
   text-align: start; }
-  .Form form label {
+  .styleForm form label {
     padding: 10px 0px; }
-  .Form form div input {
+  .styleForm form div input {
     width: 100%; }
-  .Form form input:hover,
-  .Form form textarea:hover {
+  .styleForm form input:hover,
+  .styleForm form textarea:hover {
     cursor: pointer; }
 
 input, textarea {
@@ -196,7 +275,7 @@ input, textarea {
 .buttons {
   padding: 10px 20px; }
 
-/* FONDO ANIMADO HOME */
+/* HOME FONDO ANIMADO DE ESTRELLAS  */
 .fondo-animado {
   position: absolute;
   width: 100%;
@@ -206,30 +285,30 @@ input, textarea {
     border: 0;
     display: block;
     position: absolute;
-    animation: vuelta 5s linear normal both; }
+    animation: vuelta 3s linear normal both; }
     .fondo-animado span.uno {
       font-size: 15px;
-      top: -100px;
-      color: #d8aed3; }
+      color: #d8aed3;
+      top: -100px; }
     .fondo-animado span.dos {
       font-size: 20px;
-      top: -70px;
-      color: #f0d0a3; }
+      color: #f0d0a3;
+      top: -70px; }
     .fondo-animado span.tres {
       font-size: 10px;
-      top: -50px;
-      color: #cd9b98; }
+      color: #cd9b98;
+      top: -50px; }
     .fondo-animado span.cuatro {
       font-size: 12px;
-      top: -20px;
-      color: #d39ccc; }
+      color: #d39ccc;
+      top: -20px; }
     .fondo-animado span:nth-child(1) {
       left: 5%; }
     .fondo-animado span:nth-child(2) {
       left: 50%; }
     .fondo-animado span:nth-child(3) {
       left: 35%; }
-    .fondo-animado span span:nth-child(4) {
+    .fondo-animado span:nth-child(4) {
       left: 75%; }
     .fondo-animado span:nth-child(5) {
       left: 25%; }
@@ -241,7 +320,7 @@ input, textarea {
       left: 65%; }
     .fondo-animado span:nth-child(9) {
       left: 60%; }
-    .fondo-animado span:nth-child(10) {
+    .fondo-animado span:nth-child(4) {
       left: 75%; }
     .fondo-animado span:nth-child(11) {
       left: 10%; }
@@ -254,11 +333,11 @@ input, textarea {
     .fondo-animado span.delay-3 {
       animation-delay: 3s; }
     .fondo-animado span.delay-4 {
-      animation-delay: 4s; }
-    .fondo-animado span.delay-5 {
       animation-delay: 5s; }
+    .fondo-animado span.delay-5 {
+      animation-delay: 2s; }
     .fondo-animado span.delay-6 {
-      animation-delay: 6s; }
+      animation-delay: 4s; }
 
 @keyframes vuelta {
   from {
@@ -276,13 +355,13 @@ input, textarea {
 
 /* ICONOS ANIMADOS REDES SOCIALES */
 .socialMedia a {
-  font-size: 30px;
-  height: 80px;
-  text-decoration: none;
   background: linear-gradient(90deg, #fbcb84, #cb6acd);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  height: 80px;
+  text-decoration: none; }
   .socialMedia a:hover {
     animation: saltar 1s ease-in-out 1 normal both; }
   .socialMedia a + a {
@@ -300,104 +379,13 @@ input, textarea {
   65% {
     transform: translateY(0) scale(1, 1); }
   75% {
-    transform: translateY(0.5rem) scale 1.2, 8; }
+    transform: translateY(0.5rem) scale(1.2, 0.8); }
   85% {
     transform: translateY(0) scale(1.2, 0.8); }
   95% {
     transform: translateY(0) scale(1, 1); }
   to {
     transform: translateY(0) scale(1, 1); } }
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
-
-body {
-  font-family: "Nunito", sans-serif;
-  color: #545353; }
-  body .gradient-background {
-    position: fixed;
-    top: 0;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background-attachment: scroll;
-    user-select: none;
-    pointer-events: none; }
-    body .gradient-background .gradient1 {
-      position: absolute;
-      top: -25%;
-      left: -25%;
-      width: 100%;
-      max-width: calc(20vw + 25%);
-      height: 100%;
-      max-height: calc(20vh + 25%);
-      background-image: radial-gradient(50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      transform: translate(-25%, -25%) scale(2);
-      opacity: 1; }
-    body .gradient-background .gradient2 {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      max-width: calc(20vw + 25%);
-      height: 100%;
-      max-height: calc(20vh + 25%);
-      background: radial-gradient(50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      transform: translate(50%, 50%) scale(1.5);
-      opacity: 1; }
-
-.navbar-nav a {
-  font-size: 1.2rem;
-  color: #936589;
-  font-weight: 300; }
-  .navbar-nav a:hover {
-    color: #cb7f0e; }
-
-.navbar-brand img {
-  height: 70px; }
-
-.navbar-toggler {
-  background-color: transparent; }
-  .navbar-toggler i {
-    color: #936589; }
-  .navbar-toggler:focus {
-    box-shadow: none; }
-
-h3 {
-  color: #936589;
-  padding: 10px;
-  font-size: 25px; }
-
-.subtitulos {
-  padding: 30px;
-  text-align: center; }
-
-footer {
-  font-size: 1rem;
-  padding: 20px; }
-  footer .footer {
-    padding: 10px; }
-
-.btn-primary {
-  color: #F5F5DC;
-  background-color: #936589;
-  border: none;
-  border-radius: 5px; }
-  .btn-primary:hover {
-    background-color: #a5809f; }
-
-.newsletter {
-  padding: 100px; }
-
-.contacto {
-  height: 200px;
-  align-items: center; }
 
 @media (max-width: 576px) {
   .logo h1 {

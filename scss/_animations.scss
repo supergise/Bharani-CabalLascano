@@ -1,4 +1,10 @@
-/* FONDO ANIMADO HOME */
+/* HOME FONDO ANIMADO DE ESTRELLAS  */
+@mixin styleStar ($starsize, $starcolor, $startop ) { 
+    font-size: $starsize;
+    color: $starcolor;
+    top: $startop;
+    
+}
 
 .fondo-animado {
     position: absolute;
@@ -10,101 +16,42 @@
         border: 0;
         display: block;
         position: absolute;
-        animation: vuelta 5s linear normal both;
+        animation: vuelta 3s linear normal both;
 
         &.uno {
-            font-size: 15px;
-            top: -100px;
-            color: rgb(216, 174, 211);
+            @include styleStar( 15px, rgb(216, 174, 211), -100px);
         }
-
+        
         &.dos {
-            font-size: 20px;
-            top: -70px;
-            color: rgb(240, 208, 163);
+            @include styleStar( 20px, rgb(240, 208, 163), -70px);
         }
         
         &.tres {
-            font-size: 10px;
-            top: -50px;
-            color: rgb(205, 155, 152);
+            @include styleStar( 10px, rgb(205, 155, 152), -50px);
         }
-        
+            
         &.cuatro {
-            font-size: 12px;
-            top: -20px;
-            color: rgb(211, 156, 204);
+            @include styleStar( 12px, rgb(211, 156, 204), -20px);
         }
 
-        &:nth-child(1) {
-            left: 5%;
+        $starList: 5%, 50%, 35%, 75%, 25%, 85%, 90%, 65%, 60%, 75%, 10%, 55%;
+
+        @each $left in $starList {
+            $i: index($starList, $left);
+
+            &:nth-child(#{$i}) {
+                left: $left;
+            }
         }
 
-        &:nth-child(2) {
-            left: 50%;
-        }
+        $starDelay: 1s, 2s, 3s, 5s, 2s, 4s;
 
-        &:nth-child(3) {
-            left: 35%;
-        }
-        span:nth-child(4) {
-            left: 75%;
-        }
-    
-        &:nth-child(5) {
-            left: 25%;
-        }
-    
-        &:nth-child(6) {
-            left: 85%;
-        }
-    
-        &:nth-child(7) {
-            left: 90%;
-        }
-    
-        &:nth-child(8) {
-            left: 65%;
-        }
-    
-        &:nth-child(9) {
-            left: 60%;
-        }
-    
-        &:nth-child(10) {
-            left: 75%;
-        }
-    
-        &:nth-child(11) {
-            left: 10%;
-        }
-    
-        &:nth-child(12) {
-            left: 55%;
-        }
+        @for $i from 1 through length($starDelay) {
+            $starTime: nth($starDelay, $i);
 
-        &.delay-1 {
-            animation-delay: 1s;
-        }
-        
-        &.delay-2 {
-            animation-delay: 2s;
-        }
-        
-        &.delay-3 {
-            animation-delay: 3s;
-        }
-        
-        &.delay-4 {
-            animation-delay: 4s;
-        }
-        
-        &.delay-5 {
-            animation-delay: 5s;
-        }
-        
-        &.delay-6 {
-            animation-delay: 6s;
+             &.delay-#{$i} {
+                 animation-delay: $starTime;
+                }
         }
     }
 }
@@ -131,13 +78,13 @@
 /* ICONOS ANIMADOS REDES SOCIALES */
 
 .socialMedia a {
-    font-size: 30px;
-    height: 80px;
-    text-decoration: none;
     background: linear-gradient(90deg, #fbcb84, #cb6acd);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color:transparent;
+    font-size: 30px;
+    height: 80px;
+    text-decoration: none;
 
     &:hover {
         animation: saltar 1s ease-in-out 1 normal both;
@@ -148,40 +95,21 @@
     }
 }
 
+$jump: (from 0 1 1) 
+       (15% -1rem 1 1.2) 
+       (35% -2.8rem 1 1.08)
+       (45% -2.8rem 1 1.08)
+       (65% 0 1 1)
+       (75% .5rem 1.2 .8)
+       (85% 0 1.2 .8) 
+       (95% 0 1 1)
+       (to 0 1 1);
+
+
 @keyframes saltar {
-    from {
-        transform: translateY(0) scale(1,1);
-    }
-
-    15% {
-        transform: translateY(-1rem) scale(1,1.2);
-    }
-
-    35% {
-        transform: translateY(-2.8rem) scale(1,1.08);
-    }
-
-    45% {
-        transform: translateY(-2.8rem) scale(1,1.08);
-    }
-
-    65% {
-        transform: translateY(0) scale(1,1);
-    }
-    
-    75% { 
-        transform: translateY(.5rem) scale (1.2,8);
-    }
-    
-    85% {
-        transform: translateY(0) scale(1.2,.8);
-    }
-    
-    95% {
-        transform: translateY(0) scale(1,1);
-    }
-
-    to {
-        transform: translateY(0) scale(1,1);
+    @each $jump-step in $jump {
+        #{nth($jump-step,1)} {
+            transform: translateY(#{nth($jump-step,2)}) scale(#{nth($jump-step,3)}, #{nth($jump-step,4)});
+        }
     }
 }

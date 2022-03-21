@@ -1,17 +1,12 @@
 .logo {
     h1 {
-    font-style: normal;
-    font-size: 80px;
-    font-weight: 100;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, #eabc79, #cb6acd);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
+        @extend .logogradient;
+        font-size: 80px;
+        font-weight: 100;
     }
-
+   
     h2 {
-        color: $gpink;
+        color: $grey;
         text-align: end;
         font-weight: 300;
         font-size: 20px;

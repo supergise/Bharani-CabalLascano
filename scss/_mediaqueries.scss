@@ -1,0 +1,25 @@
+@media (max-width: 576px) {
+    .logo h1 {
+        font-size: 70px;
+    }
+    
+    .video-mantel {
+        width: 100%;
+    }
+    
+    .Meli img {
+        width: 100%;
+    }
+
+    .mapa {
+        p {
+        width: 90%;
+        padding-left: 0px;
+        }
+
+        iframe {
+            padding-right: 20px;
+            padding-left: 0px;
+        }
+    }
+}
