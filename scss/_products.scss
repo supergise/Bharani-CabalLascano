@@ -1,9 +1,8 @@
 .nuestras-colecciones {
     img {
         width: 100px;
-    }
+        }
 }
-
 
 .main-almohadones {
     max-width: 540px;
@@ -16,18 +15,23 @@
     }
 }
 
-.grupo-almohadones {
+.grupo-almohadones,
+.grupo-manteles {
     padding-top: 20px;
     
     img {
         border-radius: 5px;
-        transition: all 500ms ease;
         
         &:hover {
-            overflow: hidden;
             transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
             transform: scale(1.2);
             cursor: pointer;
+            
         }
     }
+}
+   
+.video-mantel {
+    width: 100%;
+    padding-top: 10px;
 }

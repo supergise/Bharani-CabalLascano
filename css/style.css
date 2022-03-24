@@ -1,4 +1,9 @@
-.logogradient, .logo h1, .sub-Meli {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.logogradient, h1, .sub-Meli {
   font-style: normal;
   text-transform: uppercase;
   background: linear-gradient(1deg, #cb6acd, #eabc79);
@@ -6,7 +11,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
-gradient, body .gradientBackground .gradient1, body .gradientBackground .gradient2 {
+.gradient, body .gradientBackground .gradient1, body .gradientBackground .gradient2 {
   position: absolute;
   width: 100%;
   max-width: calc(20vw + 25%);
@@ -15,11 +20,6 @@ gradient, body .gradientBackground .gradient1, body .gradientBackground .gradien
   background-repeat: no-repeat;
   background-attachment: scroll;
   opacity: 1; }
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -44,15 +44,18 @@ body {
       background: radial-gradient(50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
       transform: translate(50%, 50%) scale(1.5); }
 
-.navbar-nav a {
-  font-size: 1.2rem;
-  color: #936589;
-  font-weight: 300; }
-  .navbar-nav a:hover {
-    color: #cb7f0e; }
+.navbar-nav {
+  width: 50vw;
+  justify-content: space-evenly; }
+  .navbar-nav a {
+    font-size: 1.2rem;
+    color: #936589;
+    font-weight: 700; }
+    .navbar-nav a:hover {
+      color: #cb7f0e; }
 
 .navbar-brand img {
-  height: 70px; }
+  height: 30px; }
 
 .navbar-toggler {
   background-color: transparent; }
@@ -61,11 +64,22 @@ body {
   .navbar-toggler:focus {
     box-shadow: none; }
 
+h2,
+h4 {
+  color: #545353;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center; }
+
 h3 {
   color: #545353;
   padding: 30px;
-  font-size: 22px;
+  font-size: 1.4rem;
   text-align: center; }
+
+.newsletter {
+  padding: 100px; }
 
 footer {
   font-size: 1rem;
@@ -81,33 +95,37 @@ footer {
   .btn-primary:hover {
     background-color: #a5809f; }
 
-.newsletter {
-  padding: 100px; }
-
 .contacto {
   height: 200px;
-  align-items: center; }
+  align-items: center;
+  font-weight: 600; }
 
-.logo h1 {
-  font-size: 80px;
-  font-weight: 100; }
+h1 {
+  font-size: 5rem;
+  font-weight: 100;
+  margin: 0; }
 
-.logo h2 {
+h2 {
   color: #545353;
   text-align: end;
   font-weight: 300;
-  font-size: 20px; }
+  padding: 0px;
+  margin-top: -10px; }
 
 .main-img {
   margin-top: -150px;
   z-index: -100; }
 
 .frase2 p {
+  color: #cb7f0e;
+  font-size: 1.8rem;
+  padding: 50px 0px 0px 0px;
+  font-weight: 100;
   text-align: center;
   letter-spacing: 5px; }
 
 .cards {
-  padding: 20px 10px; }
+  padding: 10px 10px; }
   .cards figure {
     position: relative;
     height: 250px;
@@ -133,9 +151,9 @@ footer {
       .cards figure .capa h3 {
         color: #F5F5DC;
         font-weight: 400;
-        margin-bottom: 120px;
+        margin-bottom: 100px;
         transition: all 500ms ease-out;
-        margin-top: 30px;
+        margin-top: 20px;
         letter-spacing: 5px; }
       .cards figure .capa p {
         color: #F5F5DC;
@@ -146,19 +164,13 @@ footer {
     .cards figure .fa-plus {
       color: #F5F5DC;
       font-size: 30px;
-      padding: 15px 0px; }
+      padding: 5px 0px; }
     .cards figure:hover .capa {
       opacity: 1;
       visibility: visible; }
       .cards figure:hover .capa h3 {
-        margin-top: 70px;
-        margin-bottom: 15px; }
-
-.frase2 p {
-  color: #cb7f0e;
-  font-size: 1.8rem;
-  padding: 50px 0px 0px 0px;
-  font-weight: 100; }
+        margin-top: 50px;
+        margin-bottom: 10px; }
 
 #MiCarousel .carousel-caption p {
   color: #545353;
@@ -180,16 +192,21 @@ footer {
     box-shadow: 0px 5px 5px rgba(40, 40, 40, 0.5);
     height: 100%; }
 
-.grupo-almohadones {
+.grupo-almohadones,
+.grupo-manteles {
   padding-top: 20px; }
-  .grupo-almohadones img {
-    border-radius: 5px;
-    transition: all 500ms ease; }
-    .grupo-almohadones img:hover {
-      overflow: hidden;
+  .grupo-almohadones img,
+  .grupo-manteles img {
+    border-radius: 5px; }
+    .grupo-almohadones img:hover,
+    .grupo-manteles img:hover {
       transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
       transform: scale(1.2);
       cursor: pointer; }
+
+.video-mantel {
+  width: 100%;
+  padding-top: 10px; }
 
 .video {
   height: 500px;
@@ -203,9 +220,10 @@ footer {
   padding: 10px; }
 
 .sub-Meli h2 {
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: 600;
-  padding: 10px; }
+  padding: 10px;
+  text-align: left; }
 
 .bio {
   padding: 0px 20px; }
@@ -217,14 +235,16 @@ footer {
 
 .orquidea {
   position: absolute;
-  padding-left: 80px; }
+  padding-left: 70px; }
   .orquidea img {
     height: 500px;
     z-index: 3; }
 
 .about-frase {
   position: absolute;
-  padding: 50px 0px 0px 600px; }
+  padding: 50px 0px 0px 600px;
+  width: 100%;
+  margin: 0; }
   .about-frase img {
     height: 200px; }
 
@@ -388,8 +408,8 @@ input, textarea {
     transform: translateY(0) scale(1, 1); } }
 
 @media (max-width: 576px) {
-  .logo h1 {
-    font-size: 70px; }
+  h1 {
+    font-size: 4rem; }
   .video-mantel {
     width: 100%; }
   .Meli img {

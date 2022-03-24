@@ -1,16 +1,16 @@
-.logo {
-    h1 {
-        @extend .logogradient;
-        font-size: 80px;
-        font-weight: 100;
-    }
-   
-    h2 {
-        color: $grey;
-        text-align: end;
-        font-weight: 300;
-        font-size: 20px;
-    }
+h1 {
+    @extend .logogradient;
+    font-size: 5rem;
+    font-weight: 100;
+    margin: 0;
+}
+
+h2 {
+    color: $grey;
+    text-align: end;
+    font-weight: 300;
+    padding: 0px;
+    margin-top: -10px;
 }
 
 .main-img {
@@ -20,14 +20,17 @@
 
 .frase2 {
     p {
-        text-align: center;
-        letter-spacing: 5px;
+    color: $mustar;
+    font-size: 1.8rem;
+    padding: 50px 0px 0px 0px;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 5px;
     }
 }
 
-
 .cards {
-    padding: 20px 10px;
+    padding: 10px 10px;
 
     figure {
         position: relative;
@@ -58,9 +61,9 @@
             h3 { 
                 color: $cream;
                 font-weight: 400;
-                margin-bottom: 120px;
+                margin-bottom: 100px;
                 transition: all 500ms ease-out;
-                margin-top: 30px;
+                margin-top: 20px;
                 letter-spacing: 5px;
             }
 
@@ -76,7 +79,7 @@
         .fa-plus {
             color: $cream;
             font-size: 30px;
-            padding: 15px 0px;
+            padding: 5px 0px;
         }
 
         &:hover .capa {
@@ -84,19 +87,10 @@
             visibility: visible;
 
             h3 {
-                margin-top: 70px;
-                margin-bottom: 15px;
+                margin-top: 50px;
+                margin-bottom: 10px;
             }
         }
-    }
-}
-
-.frase2 {
-    p {
-    color: $mustar;
-    font-size: 1.8rem;
-    padding: 50px 0px 0px 0px;
-    font-weight: 100;
     }
 }
 
