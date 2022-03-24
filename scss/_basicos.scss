@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 .logogradient {
     font-style: normal;
@@ -8,7 +13,7 @@
     -webkit-text-fill-color:transparent;
 }
 
-gradient {
+.gradient {
     position: absolute;
     width: 100%;
     max-width: calc(20vw + 25%);
@@ -17,12 +22,6 @@ gradient {
     background-repeat: no-repeat;
     background-attachment: scroll;
     opacity: 1;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -40,7 +39,7 @@ body {
         pointer-events: none;
         
         .gradient1 {
-            @extend gradient;
+            @extend .gradient;
             top: -25%;
             left: -25%;
             background: radial-gradient( 50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
@@ -48,7 +47,7 @@ body {
         }
         
         .gradient2 {
-            @extend gradient;
+            @extend .gradient;
             right: 0;
             bottom: 0;
             background: radial-gradient( 50% 50% at 50% 50%,#EACDCD 0%, rgba(255, 255, 255, 0) 100%);
@@ -58,18 +57,23 @@ body {
 }
         
 .navbar {
-    &-nav a {
-        font-size: 1.2rem;
-        color: $gpink;
-        font-weight: 300;
-    
-        &:hover {
+    &-nav {
+        width: 50vw;
+        justify-content: space-evenly;
+
+        a {
+            font-size: 1.2rem;
+            color: $gpink;
+            font-weight: 700;
+        
+            &:hover {
             color: $mustar;
-        } 
+            } 
+        }
     }
 
     &-brand img {
-        height: 70px;
+        height: 30px;
     }
 
     &-toggler {
@@ -85,12 +89,25 @@ body {
     }
 
 }
-    
+
+h2,
+h4 {
+    color: $grey;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
 h3 {
     color: $grey;
     padding: 30px;
-    font-size: 22px;
+    font-size: 1.4rem;
     text-align: center;
+}
+
+.newsletter {
+    padding: 100px;
 }
 
 footer {
@@ -113,11 +130,8 @@ footer {
     }
 }
 
-.newsletter {
-    padding: 100px;
-}
-
 .contacto {
     height: 200px;
     align-items: center;
+    font-weight: 600;
 }
