@@ -118,7 +118,7 @@ h2 {
 
 .frase2 p {
   color: #cb7f0e;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding: 50px 0px 0px 0px;
   font-weight: 100;
   text-align: center;
@@ -189,8 +189,7 @@ h2 {
   padding-top: 20px; }
   .main-almohadones img {
     border-radius: 5px;
-    box-shadow: 0px 5px 5px rgba(40, 40, 40, 0.5);
-    height: 100%; }
+    box-shadow: 0px 5px 5px rgba(40, 40, 40, 0.5); }
 
 .grupo-almohadones,
 .grupo-manteles {
