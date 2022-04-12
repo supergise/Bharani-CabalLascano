@@ -1,31 +1,16 @@
-h1 {
-    @extend .logogradient;
-    font-size: 5rem;
-    font-weight: 100;
-    margin: 0;
-}
-
-h2 {
-    color: $grey;
-    text-align: end;
-    font-weight: 300;
-    padding: 0px;
-    margin-top: -10px;
-}
-
 .main-img {
-    margin-top: -150px;
+    margin-top: -100px;
     z-index: -100;
 }
 
-.frase2 {
+.frases {
     p {
     color: $mustar;
-    font-size: 1.8rem;
-    padding: 50px 0px 0px 0px;
+    font-size: 1.6rem;
     font-weight: 100;
-    text-align: center;
+    padding: 50px 0px 0px 0px;
     letter-spacing: 5px;
+    text-align: center;
     }
 }
 
@@ -69,7 +54,7 @@ h2 {
 
             p {
                 color: $cream;
-                font-size: 18px;
+                font-size: 1.1rem;
                 width: 100%;
                 max-width: 220px;
                 margin: auto;
@@ -78,7 +63,7 @@ h2 {
 
         .fa-plus {
             color: $cream;
-            font-size: 30px;
+            font-size: 1.5rem;
             padding: 5px 0px;
         }
 
@@ -94,17 +79,37 @@ h2 {
     }
 }
 
-#MiCarousel {
-    .carousel-caption {
-        p {
-            color: $grey;
-            font-weight: 700;
-        } 
+#home-banner .carousel-inner img {
+    max-height: 60vh;
+    object-fit: cover;
+    filter: grayscale(10%);
+}
+        
+#carousel {
+    padding: 100px 0px 30px 0px;
+    position: relative;
+}
+
+#carousel .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(131, 89, 89, 0.266) ;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    z-index: 1;
+
+    h5 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: white;
     }
-    
-    .carousel-control-prev,
-    .carousel-control-next {
-        color: $gpink;
-        font-size: 40px;
-    } 
+}
+
+#carousel .overlay .container,
+#carousel .overlay .row {
+    height: 100%;
 }

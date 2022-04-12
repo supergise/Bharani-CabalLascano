@@ -5,14 +5,13 @@
 }
 
 .logogradient {
-    font-style: normal;
     text-transform: uppercase;
     background: linear-gradient(1deg, #cb6acd, #eabc79);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color:transparent;
 }
-
+    
 .gradient {
     position: absolute;
     width: 100%;
@@ -42,7 +41,7 @@ body {
             @extend .gradient;
             top: -25%;
             left: -25%;
-            background: radial-gradient( 50% 50% at 50% 50%, #EACDCD 0%, rgba(255, 255, 255, 0) 100%);
+            background: radial-gradient( 50% 50% at 50% 50%, $softpink 0%, rgba(255, 255, 255, 0) 100%);
             transform: translate(-25%, -25%) scale(2);
         }
         
@@ -50,17 +49,17 @@ body {
             @extend .gradient;
             right: 0;
             bottom: 0;
-            background: radial-gradient( 50% 50% at 50% 50%,#EACDCD 0%, rgba(255, 255, 255, 0) 100%);
+            background: radial-gradient( 50% 50% at 50% 50%, $softpink 0%, rgba(255, 255, 255, 0) 100%);
             transform: translate(50%, 50%) scale(1.5);
         }
     }
 }
-        
+
 .navbar {
     &-nav {
         width: 50vw;
         justify-content: space-evenly;
-
+        
         a {
             font-size: 1.2rem;
             color: $gpink;
@@ -75,7 +74,7 @@ body {
     &-brand img {
         height: 30px;
     }
-
+        
     &-toggler {
         background-color: transparent;
     
@@ -87,27 +86,47 @@ body {
             box-shadow: none;
         }
     }
-
 }
 
-h2,
-h4 {
-    color: $grey;
-    padding: 10px;
-    font-size: 1.1rem;
+h1 {
+    @extend .logogradient;
+    font-size: 5rem;
+    font-weight: 100;
+}
+        
+h2 {
+    @extend .logogradient;
+    font-size: 2rem;
     font-weight: 600;
-    text-align: center;
 }
 
 h3 {
     color: $grey;
-    padding: 30px;
     font-size: 1.4rem;
+    font-weight: 300;
+    padding: 30px;
     text-align: center;
 }
 
+h4 {
+    color: $grey;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px;
+    text-align: center;
+}
+
+h5 {
+    color: $grey;
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 0px;
+    margin-top: -10px;
+    text-align: end;
+}
+
 .newsletter {
-    padding: 100px;
+    padding: 100px 50px;
 }
 
 footer {
@@ -118,15 +137,16 @@ footer {
         padding: 10px;
     }
 }
-
+    
 .btn-primary {
-    color: $cream; 
-    background-color: $gpink;
+    color: $grey; 
+    font-weight: 600;
+    background-color: $softpink;
     border: none;
     border-radius: 5px;
 
     &:hover {
-        background-color: #a5809f;
+        background-color: #a5809fda;
     }
 }
 

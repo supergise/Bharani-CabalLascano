@@ -3,23 +3,23 @@
         font-size: 4rem;
     }
     
+    #carousel .overlay h5 {
+        text-align: center;
+    }
+
     .video-mantel {
         width: 100%;
     }
-    
-    .Meli img {
-    width: 100%;
+        
+    .video-contact {
+        padding: 30px 0px;
+        
+        video {
+            width: 70%;
+        }
     }
-    
-    .mapa {
-        p {
-        width: 90%;
-        padding-left: 0px;
-        }
 
-        iframe {
-            padding-right: 20px;
-            padding-left: 0px;
-        }
+    .contact-fondo {
+        margin: 0px;
     }
 }

@@ -1,45 +1,51 @@
+.form-contact {
+    background-color: $softpink;
+    margin: 30px 0px;
+}
+
+.video-contact {
+    overflow: hidden;
+}
+
 .Form {
-    padding: 0px 50px;
+    padding: 0px 15px;
 }
-
-.mapa {
+    
+.datos-contact {
+    background-color: #fef3f3 ;
+    
     p {
-        margin-left: 30px;
+        font-size: 1.2rem;
+        padding-bottom: 15px;
     }
-
-    span {
-        width: 100%;
-        padding: 0px 10px 25px 40px;
-    }
-
+        
     iframe {
-        margin-left: 20px;
+        margin: 30px 0px 30px 0px;
     }
 }
 
-.styleForm {
-    text-align: start;
+form {
+    label {
+        padding: 10px 0px;
+    }
 
-    form {
-        label {
-            padding: 10px 0px;
-        }
+    div input {
+        width: 100%;
+    }
 
-        div input {
-            width: 100%;
-        }
-
-        input:hover,
-        textarea:hover {
-            cursor: pointer;
-        }
+    input:hover,
+    textarea:hover {
+        cursor: pointer;
     }
 }
 
 input, textarea {
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid $grey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid $grey;
+    background-color: transparent;
 }
 
 .buttons {

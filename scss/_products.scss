@@ -1,7 +1,7 @@
 .nuestras-colecciones {
     img {
         width: 100px;
-        }
+    }
 }
 
 .main-almohadones {
@@ -11,27 +11,39 @@
     img {
         border-radius: 5px;
         box-shadow: 0px 5px 5px rgba(40, 40, 40, 0.5);
-        height: 100%;
     }
 }
-
+        
 .grupo-almohadones,
 .grupo-manteles {
     padding-top: 20px;
+    position: relative;
     
     img {
         border-radius: 5px;
         
         &:hover {
+            
             transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
             transform: scale(1.2);
             cursor: pointer;
-            
         }
     }
 }
-   
+            
 .video-mantel {
     width: 100%;
     padding-top: 10px;
+}
+
+.overlay-group {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    &:hover {
+        display: none;
+    }
 }
