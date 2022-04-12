@@ -1,14 +1,7 @@
-.sub-Meli {
-    @extend .logogradient;
+.sub-meli {
+    padding: 30px 20px;
+}
 
-    h2 {
-        font-size: 2rem;
-        font-weight: 600;
-        padding: 10px;
-        text-align: left;
-    }
-}   
-    
 .bio {
     padding: 0px 20px;
     p {
@@ -17,43 +10,39 @@
 }
 
 .Meli {
-    height: 800px;
-}
-
-.orquidea {
-   position: absolute;
-   padding-left: 70px;
-   
-   img {
-        height: 500px;
-        z-index: 3;
-    }
-}
-
-.about-frase {
-   position: absolute;
-   padding: 50px 0px 0px 600px;
-   width: 100%;
-   margin: 0;
-
-   img {
-        height: 200px;
-    }
-}
-
-.about-fondo {
-    background-color: #f4e0e0;
-    height: 650px;
-    width: 600px;
-    position: absolute;
-    z-index: -50;
-    margin: 50px 0px 0px 400px;
+    width: 90%;
+    padding-top: 30px;
 }
 
 .calidad {
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 600;
     color: $grey;
     padding: 10px;
-    text-align: center;
+}
+
+.about-fondo-estrella {
+    background-image: url(../pictures/about-fondo.png);
+    background-size: 900px;
+    padding: 80px;
+    margin-top: 20px;
+}
+
+.about {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+}
+
+.about {
+    &-pink {
+        background-color: #f4e0e0;
+        @extend .about;
+    } 
+
+    &-mustard {
+        background-color: #f4d988;
+        @extend .about;
+    }
 }
